@@ -18,9 +18,16 @@
         </div>
       </template>
       <template v-else>
-        <div class="div-spinner">
-          <SpinnerLoading />
-        </div>
+        <template v-if="notFound">
+          <div class="no-found-result">
+            <h2>Película no encontrada</h2>
+          </div>
+        </template>
+        <template v-else>
+          <div class="div-spinner">
+            <SpinnerLoading />
+          </div>
+        </template>
       </template>
     </section>
   </div>
@@ -32,6 +39,7 @@ export default {
   name: "ResultSearchMovies",
   props: {
     movies: Array,
+    notFound: Boolean,
   },
   components: { CardMovies, SpinnerLoading },
 };

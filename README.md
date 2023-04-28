@@ -59,6 +59,7 @@ yarn lint
 12. Se crea un componente "Card" para mostrar la infomación de cada película a través de la directiva "v-for" (ciclos), en dicha "Card" se muestra solo la "Poster" y el "Title" de la película.
 13. Se configura la imagen "Poster" para que al hacer "hover" se muestre una animación y al dar clic sobre ella lleve al usuario a otra página donde podrá ver el detalle de la película.
 14. Se crea una page para mostar el detalle de los datos de la película seleccionada, esta page tiene un boto para regresar a la página principal.
+15. Se integra una paginación sencilla para dar al usuario la posibilidad de ir a otras páginas después de realizar una búsqueda.
 
 ### Estructuras y directorios
 
@@ -83,4 +84,4 @@ yarn lint
 - Cuando el usuario realiza la búsqueda de una película y la OMDb API devuelve una respuesta satisfactoria, ese texto de búsqueda se guarda en el localStorage como "last-search", cuando inicia la aplicación la aplicación busca en el "localStorage" si existe ese item, en caso de existir, la aplicación realiza la búsqueda de ese texto para mostrar la última búsqueda, en caso de no existir, se realiza la búsqueda de "batman" por defecto, esto le permite ver algo en la página y no una página sin resultados.
 - Cuando el usuario ingresa al detalle de una película se toma el "ID" y se guarda en el localStorage, si el usuario recarga la página se toma ese "ID" y se realiza la búsqueda de esa película, con esta acción evitamos los errores de recarga.
 
-### `Gracias por la oportunidad de demostrar mis conocimientos y mi forma de trabajar, disfrute mucho de hacer este projecto.`
+### `Gracias por la oportunidad de demostrar mis conocimientos y mi forma de trabajar, disfruté mucho de hacer este projecto.`

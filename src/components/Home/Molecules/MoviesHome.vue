@@ -1,7 +1,7 @@
 <template>
   <div class="container my-3">
     <SearchMovies @onSubmitHandler="onSubmit" />
-    <ResultSearchMovies :movies="movies" />
+    <ResultSearchMovies :movies="movies" :notFound="notFound" />
     <template v-if="pagination.numberPages">
       <PaginationMovies
         :pagination="pagination"
@@ -32,10 +32,11 @@ export default {
       textSearch: null,
       pagination: {
         currentPage: 1,
-        totalResults: 1,
-        numberPages: 1,
+        totalResults: null,
+        numberPages: null,
       },
       movies: null,
+      notFound: false,
     };
   },
   mounted() {
@@ -52,12 +53,18 @@ export default {
         this.textSearch,
         this.pagination.currentPage
       );
-      if (status === 200) {
+      if (status === 200 && data) {
         this.movies = data;
         this.pagination.totalResults = totalResults;
         LocalStorageEncrypt.encrypt("last-search", this.textSearch);
         this.getNumberPagesMovies(totalResults);
+        this.notFound = false;
+        return;
       }
+      this.movies = null;
+      this.notFound = true;
+      this.pagination.totalResults = null;
+      this.pagination.numberPages = null;
     },
     getNumberPagesMovies(totalPages) {
       if (totalPages % 10 > 0) {
