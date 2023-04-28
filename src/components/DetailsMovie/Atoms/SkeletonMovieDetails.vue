@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-4 my-3 text-start shadow overflow-hidden">
+  <div class="container p-4 my-3 text-start shadow overflow-hidden col-lg-6">
     <h1 class="card-title placeholder-glow text-center mb-1">
       <span class="placeholder col-8"></span>
     </h1>

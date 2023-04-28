@@ -26,8 +26,8 @@
   </div>
 </template>
 <script>
-import CardMovies from "@/components/Movies/CardMovies.vue";
-import SpinnerLoading from "@/components/Spinner/Spinner.vue";
+import CardMovies from "@/components/Home/Atoms/CardMovies.vue";
+import SpinnerLoading from "@/components/Global/Spinner/Spinner.vue";
 export default {
   name: "ResultSearchMovies",
   props: {

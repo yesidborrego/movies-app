@@ -1,5 +1,5 @@
 import { getMovie } from "@/services/moviesAPI";
-import { LocalStorageEncrypt } from "@/utility/localStorage";
+import { LocalStorageEncrypt } from "@/utilities/localStorage";
 
 export const useMovieDetails = {
   data() {

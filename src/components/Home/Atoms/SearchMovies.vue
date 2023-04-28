@@ -8,10 +8,17 @@
           aria-describedby="emailHelp"
           placeholder="Type the name of the movie"
           v-model="searchtext"
+          maxlength="50"
         />
       </div>
       <div class="form-button">
-        <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+        <button
+          type="submit"
+          class="btn btn-primary btn-sm"
+          :disabled="!searchtext"
+        >
+          Submit
+        </button>
       </div>
     </div>
   </form>
@@ -27,7 +34,7 @@ export default {
   },
   methods: {
     onSubmit() {
-      this.$emit("onSubmitHandler", this.searchtext);
+      this.$emit("onSubmitHandler", this.searchtext.trim());
     },
   },
 };

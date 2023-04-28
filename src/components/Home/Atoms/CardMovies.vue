@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { convertTitleInSlug } from "@/utility/convertTitleInSlug";
+import { convertTitleInSlug } from "@/utilities/convertTitleInSlug";
 
 export default {
   name: "CardMovies",

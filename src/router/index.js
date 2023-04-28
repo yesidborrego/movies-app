@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import MoviesPage from "@/views/MoviesPage.vue";
+import MoviesPage from "@/views/home/index.vue";
 
 Vue.use(VueRouter);
 
