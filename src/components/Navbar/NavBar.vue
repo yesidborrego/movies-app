@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-md bg-body-tertiary">
+  <nav class="navbar navbar-expand-md bg-body-tertiary fixed-top p-2">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">TecnoGlass</a>
       <button

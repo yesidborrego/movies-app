@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import { MoviesPage } from "@/views";
+import MoviesPage from "@/views/MoviesPage.vue";
 
 Vue.use(VueRouter);
 
@@ -10,15 +10,15 @@ const routes = [
     name: "home",
     component: MoviesPage,
   },
-  // {
-  //   path: "/about",
-  //   name: "about",
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () =>
-  //     // import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
-  // },
+  {
+    path: "/movie/:slug",
+    name: "movie-details",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/movieDetails/index.vue"),
+    props: (route) => {
+      return { slug: route.params.slug };
+    },
+  },
 ];
 
 const router = new VueRouter({
