@@ -30,6 +30,18 @@ yarn build
 yarn lint
 ```
 
+### Lints and fixes files
+
+```
+- Cambiar el nombre del archivo .env.example a .env o .env.local
+- En el archivo .env, configurar los valores para las 2 variables de entorno:
+VUE_APP_OMDB_API_KEY=[YouKey]
+VUE_APP_LOCAL_STORAGE_ENCRYPT_SECRET=[ANY-VALUE]
+
+***"VUE_APP_LOCAL_STORAGE_ENCRYPT_SECRET", Se utiliza como "salt" al momento de hacer la encriptación y desencriptación del localStorage
+
+```
+
 ### Tools and library used
 
 - Vue/cli v5.0.8: https://cli.vuejs.org/
